@@ -1,5 +1,5 @@
-from time_table import screenshot 
-from time_table import telegram
+from time_table import screenshot , telegram, scheduler
+
 
 import sys
 import json
@@ -18,8 +18,12 @@ chromedrivers_path = {
 # credentials
 with open(r"./assests/credentials/credentials.json", "r") as f:
     credentials = json.load(f)
+
+
+def main():
+    screenshot.take_screenshot(machine, chromedrivers_path, timetable_name, credentials)
+    print("done")
+    # telegram.send_image(timetable_name, credentials)    
     
 if __name__ == "__main__":
-    screenshot.take_screenshot(machine, chromedrivers_path, timetable_name, credentials)
-    telegram.send_image(timetable_name, credentials)
-    
+    scheduler.schedule_every_day("18:50", main)
