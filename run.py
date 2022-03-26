@@ -21,5 +21,5 @@ with open(r"./assests/credentials/credentials.json", "r") as f:
     
 if __name__ == "__main__":
     screenshot.take_screenshot(machine, chromedrivers_path, timetable_name, credentials)
-    # telegram.send_image(timetable_name, credentials)
+    telegram.send_image(timetable_name, credentials)
     
