@@ -66,6 +66,7 @@ def take_screenshot(machine, chromedrivers_path, timetable_name, credentials) ->
         driver.find_element(by=By.XPATH, value="""//*[@id="MyPopup19"]""").click()
     except:
         pass
+        
     # selecting  the time table tab
 
     # sleep(1)
