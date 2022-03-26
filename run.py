@@ -1,5 +1,5 @@
-from tools import screenshot 
-from tools import telegram
+from time_table import screenshot 
+from time_table import telegram
 
 import sys
 import json
@@ -8,7 +8,7 @@ from datetime import date
 
 # global macros
 machine = sys.platform  # get the machine type
-timetable_name = f"./time-table/{date.today()}.png"
+timetable_name = f"./screenshots/{date.today()}.png"
 chromedrivers_path = {
     "linux" :  r"./assests/chromedrivers/linux/chromedriver",
     "win32" : r"./assests/chromedrivers/win32/chromedriver.exe",
