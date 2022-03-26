@@ -1,0 +1,2 @@
+# amizone-timetable-bot
+ 
