@@ -1,4 +1,4 @@
-from time_table import screenshot , telegram
+from time_table import screenshot , telegram, scheduler
 
 
 import sys
@@ -25,4 +25,4 @@ def main():
     # telegram.send_image(timetable_name, credentials)    
     
 if __name__ == "__main__":
-    main()
+    scheduler.schedule_every_day("19:18", main)
