@@ -22,8 +22,7 @@ with open(r"./assests/credentials/credentials.json", "r") as f:
 
 def main():
     screenshot.take_screenshot(machine, chromedrivers_path, timetable_name, credentials)
-    print("done")
-    # telegram.send_image(timetable_name, credentials)    
+    telegram.send_image(timetable_name, credentials)    
     
 if __name__ == "__main__":
     scheduler.schedule_every_day("18:50", main)
